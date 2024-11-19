@@ -25,7 +25,7 @@ git clone https://github.com/fergiee7/ProyectoFrames.git
 
 ### 2. Ingresar al Directorio del Proyecto
 Cambia al directorio del proyecto clonado:
-cd ProyectoFinal
+cd ProyectoFrames
 
 ### 3. Crear Contenedor en Docker
 Crea un contenedor en Docker para MySQL con las siguientes configuraciones:
@@ -39,7 +39,7 @@ docker run --name mysql -e MYSQL_ROOT_PASSWORD=test -d mysql:latest
 
 ### 4. Configuración de DBeaver
 Abre DBeaver y crea una nueva conexión a la base de datos MySQL. Configura la conexión con los siguientes parámetros:
-- Nombre base de datos: proyecto_1
+- Nombre base de datos: escuela
 - Host: localhost
 - Port: 8080
 - Username: root
