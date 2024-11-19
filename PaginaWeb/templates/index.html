@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a la página principal</h1>
+
+        <!-- Mensaje de error si existe -->
+        {{if .error}}
+        <div class="alert alert-danger" role="alert">
+            {{.error}}
+        </div>
+        {{end}}
+
+     <!-- Formulario de registro -->
+<h3>Crear cuenta</h3>
+<form action="/register" method="POST">
+    <div class="mb-3">
+        <label for="username" class="form-label">Nombre de usuario</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+
+    <!-- Campo para seleccionar el rol -->
+    <div class="mb-3">
+        <label for="rol" class="form-label">Rol</label>
+        <select class="form-control" id="rol" name="rol" required>
+            <option value="administrativo">Administrativo</option>
+            <option value="estudiante">Estudiante</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar</button>
+</form>
+
+        <!-- Otras opciones -->
+        <p><a href="/login">Iniciar sesión</a></p>
+    </div>
+
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

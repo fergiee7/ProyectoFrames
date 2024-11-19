@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Materia</title>
+</head>
+<body>
+    <h1>Editar Materia</h1>
+
+    <form action="/actualizar_materia/{{.materia.ID}}" method="POST">
+        <input type="text" name="nombre" value="{{.materia.Nombre}}" required><br>
+        <input type="text" name="descripcion" value="{{.materia.Descripcion}}" required><br>
+        <button type="submit">Actualizar Materia</button>
+    </form>
+
+    <!-- Botón para regresar al Dashboard -->
+    <a href="/materias"><button>Regresar</button></a>
+</body>
+</html>

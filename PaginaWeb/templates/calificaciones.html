@@ -1,0 +1,24 @@
+<h1>Gestionar Calificaciones</h1>
+
+<h2>Agregar nueva calificación</h2>
+<form action="/agregar_calificacion" method="POST">
+    <input type="text" name="materia_id" placeholder="ID Materia" required><br>
+    <input type="text" name="alumno_id" placeholder="ID Alumno" required><br>
+    <input type="number" name="nota" placeholder="Nota (solo enteros)" required min="0" step="1"><br>
+    <button type="submit">Agregar</button>
+</form>
+
+
+<h2>Calificaciones existentes</h2>
+<ul>
+    {{range .calificaciones}}
+        <li>
+            Materia ID: {{.MateriaID}}, Alumno ID: {{.AlumnoID}}, Calificación: {{.Calificacion}}
+            <a href="/editar_calificacion/{{.ID}}">Editar</a> | 
+            <a href="/eliminar_calificacion/{{.ID}}">Eliminar</a>
+        </li>
+    {{else}}
+        <p>No hay calificaciones disponibles.</p>
+    {{end}}
+</ul>
+<a href="/dashboard"><button>Regresar al Dashboard</button></a>

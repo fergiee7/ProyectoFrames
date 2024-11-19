@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+</head>
+<body>
+    <h2>Registrar Usuario</h2>
+    {{if .error}}
+    <p style="color:red">{{.error}}</p>
+    {{end}}
+    <form method="POST" action="/register">
+        <label>Nombre de usuario:</label><br>
+        <input type="text" name="username" required><br><br>
+
+        <label>Contraseña:</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <label>Rol:</label><br>
+        <select name="rol" required>
+            <option value="administrativo">Administrativo</option>
+        </select><br><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+    <a href="/login">Iniciar sesión</a>
+</body>
+</html>

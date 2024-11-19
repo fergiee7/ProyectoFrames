@@ -1,0 +1,21 @@
+<!-- templates/login.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <!-- templates/login.html -->
+<h2>Iniciar sesión</h2>
+<form action="/login" method="POST">
+    <input type="text" name="username" placeholder="Usuario" required><br>
+    <input type="password" name="password" placeholder="Contraseña" required><br>
+    <button type="submit">Iniciar sesión</button>
+</form>
+
+<!-- Enlace para registrar nuevo usuario -->
+<p>¿No tienes una cuenta? <a href="/register">Crear nuevo usuario</a></p>
+
+</body>
+</html>
